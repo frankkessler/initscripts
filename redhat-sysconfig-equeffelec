@@ -7,15 +7,17 @@
 
 # WARNING: change these wisely! for instance, adding -d, --nodaemon
 # here will lead to a very undesirable (blocking) behavior
-#OPTIONS="-c /etc/supervisord.conf"
-#PIDFILE=/var/run/supervisord.pid
-#LOCKFILE=/var/lock/subsys/supervisord.pid
+OPTIONS="-c /etc/supervisord.conf"
+PIDFILE=/var/run/supervisord.pid
+LOCKFILE=/var/lock/subsys/supervisord.pid
 
 # Path to the supervisord binary
-#SUPERVISORD=/usr/bin/supervisord
+SUPERVISORD=/usr/bin/supervisord
 
 # How long should we wait before forcefully killing the supervisord process ?
-#STOP_TIMEOUT=60
+STOP_TIMEOUT=60
+
+WAIT_FOR_SUBPROCESSES=true
 
 # Remove this if you manage number of open files in some other fashion
 ulimit -n 96000
